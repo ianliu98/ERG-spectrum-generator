@@ -79,7 +79,7 @@ def _select_mgf():
     mgf_path = askopenfilename(initialdir=os.getcwd(),
                                title=' Select MGF file', filetypes=[('CDF Files', '*.cdf')])    # open file
     mgf_name = os.path.split(mgf_path)[-1][:-4]
-    mgf_data = cdf.CDF(mgf_name)
+    mgf_data = cdf.CDF(mgf_path)
     MGNT = mgf_data['magt_8sec'][:]  # choose magnitude file
     MGF_EPOCH =mgf_data['epoch_8sec'][:]  # choose epoch file
 
